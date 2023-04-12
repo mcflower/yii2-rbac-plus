@@ -1,12 +1,12 @@
 <?php
 
-namespace amintado\rbacplus\models;
+namespace mcflower\rbacplus\models;
 
 use Yii;
 use yii\data\ArrayDataProvider;
 
 /**
- * @author John Martin <john.itvn@gmail.com>
+ * @author Ilya Zelenskiy <elias-green@yandex.ru>
  * @since 1.0.0
  */
 class RuleSearch extends Rule {
