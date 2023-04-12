@@ -1,6 +1,6 @@
 <?php
 
-namespace amintado\rbacplus\models;
+namespace mcflower\rbacplus\models;
 
 use Yii;
 use yii\rbac\Item;
@@ -8,7 +8,7 @@ use yii\rbac\Item;
 /**
  * Description of Permistion
  *
- * @author John Martin <john.itvn@gmail.com>
+ * @author Ilya Zelenskiy <elias-green@yandex.ru>
  * @since 1.0.0
  */
 class Permission extends AuthItem {
