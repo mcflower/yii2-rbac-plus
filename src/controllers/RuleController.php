@@ -1,6 +1,6 @@
 <?php
 
-namespace amintado\rbacplus\controllers;
+namespace mcflower\rbacplus\controllers;
 
 use Yii;
 use yii\web\Controller;
@@ -8,13 +8,13 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
 use yii\helpers\Html;
-use amintado\rbacplus\models\Rule;
-use amintado\rbacplus\models\RuleSearch;
+use mcflower\rbacplus\models\Rule;
+use mcflower\rbacplus\models\RuleSearch;
 
 /**
  * RuleController is controller for manager rule
  *
- * @author John Martin <john.itvn@gmail.com>
+ * @author Ilya Zelenskiy <elias-green@yandex.ru>
  * @since 1.0.0
  */
 class RuleController extends Controller {
@@ -32,6 +32,18 @@ class RuleController extends Controller {
                 ],
             ],
         ];
+    }
+    
+    public function beforeAction($action)
+    {
+        if (parent::beforeAction($action)) {
+            if (!\Yii::$app->user->can('sys_admin') && !\Yii::$app->user->can('root')) {
+                throw new ForbiddenHttpException('Доступ запрещен');
+            }
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
