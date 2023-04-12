@@ -1,13 +1,13 @@
 <?php
 
-namespace amintado\rbacplus\models;
+namespace mcflower\rbacplus\models;
 
 use Yii;
 use yii\base\Model;
 use yii\rbac\Item;
 
 /**
- * @author John Martin <john.itvn@gmail.com>
+ * @author Ilya Zelenskiy <elias-green@yandex.ru>
  * @since 1.0.0
  */
 abstract class AuthItem extends Model {
