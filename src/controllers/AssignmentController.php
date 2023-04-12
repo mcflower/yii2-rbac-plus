@@ -31,6 +31,18 @@ class AssignmentController extends Controller {
         parent::init();
         $this->rbacModule = Yii::$app->getModule('rbac');
     }
+    
+    public function beforeAction($action)
+    {
+        if (parent::beforeAction($action)) {
+            if (!\Yii::$app->user->can('sys_admin') && !\Yii::$app->user->can('root')) {
+                throw new ForbiddenHttpException('Доступ запрещен');
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     /**
      * Show list of user for assignment
