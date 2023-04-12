@@ -1,19 +1,19 @@
 <?php
 
-namespace amintado\rbacplus\controllers;
+namespace mcflower\rbacplus\controllers;
 
 use Yii;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\helpers\Html;
-use amintado\rbacplus\Module;
-use amintado\rbacplus\models\AssignmentSearch;
-use amintado\rbacplus\models\AssignmentForm;
+use mcflower\rbacplus\Module;
+use mcflower\rbacplus\models\AssignmentSearch;
+use mcflower\rbacplus\models\AssignmentForm;
 
 /**
  * AssignmentController is controller for manager user assignment
  *
- * @author John Martin <john.itvn@gmail.com>
+ * @author Ilya Zelenskiy <elias-green@yandex.ru>
  * @since 1.0.0
  */
 class AssignmentController extends Controller {
