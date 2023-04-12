@@ -1,6 +1,6 @@
 <?php
 
-namespace amintado\rbacplus;
+namespace mcflower\rbacplus;
 
 use Yii;
 use yii\base\Module as BaseModule;
@@ -8,7 +8,7 @@ use yii\base\Module as BaseModule;
 /**
  * Description of Module
  *
- * @author John Martin <john.itvn@gmail.com>
+ * @author Ilya Zelenskiy <elias-green@yandex.ru>
  * @since 1.0.0
  */
 class Module extends BaseModule {
