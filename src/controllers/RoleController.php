@@ -1,6 +1,6 @@
 <?php
 
-namespace amintado\rbacplus\controllers;
+namespace mcflower\rbacplus\controllers;
 
 use Yii;
 use yii\web\Controller;
@@ -8,12 +8,12 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
 use yii\helpers\Html;
-use amintado\rbacplus\models\Role;
-use amintado\rbacplus\models\RoleSearch;
+use mcflower\rbacplus\models\Role;
+use mcflower\rbacplus\models\RoleSearch;
 
 /**
  * RoleController is controller for manager role
- * @author John Martin <john.itvn@gmail.com>
+ * @author Ilya Zelenskiy <elias-green@yandex.ru>
  * @since 1.0.0
  */
 class RoleController extends Controller {
@@ -31,6 +31,18 @@ class RoleController extends Controller {
                 ],
             ],
         ];
+    }
+    
+    public function beforeAction($action)
+    {
+        if (parent::beforeAction($action)) {
+            if (!\Yii::$app->user->can('sys_admin') && !\Yii::$app->user->can('root')) {
+                throw new ForbiddenHttpException('Доступ запрещен');
+            }
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
