@@ -1,5 +1,5 @@
 {
-    "name": "amintado/yii2-module-rbac-plus",
+    "name": "mcflower/yii2-rbac-plus",
     "description":"Database role base access control manager for yii2",
     "type": "yii2-extension",
     "license": "Apache-2.0",
@@ -8,14 +8,16 @@
             "name": "John Martin",
             "email": "john.itvn@gmail.com",
             "homepage": "https://github.com/johnitvn?tab=repositories"
+        },
+        {
+            "name": "Ilya Zelenskiy",
+            "email": "elias-green@yandex.ru",
+            "homepage": "https://github.com/mcflower?tab=repositories"
         }
     ],    
     "support": {
-        "issues": "https://github.com/johnitvn/yii2-rbac-plus/issues?state=open",
-        "source": "https://github.com/johnitvn/yii2-rbac-plus"
-    },
-    "suggest": {
-        "johnitvn/yii2-user-plus": "High flexible user management extension for yii2"
+        "issues": "https://github.com/mcflower/yii2-rbac-plus/issues?state=open",
+        "source": "https://github.com/mcflower/yii2-rbac-plus"
     },
     "minimum-stability": "dev",
     "require": {
@@ -24,10 +26,10 @@
     },
     "autoload": {
         "psr-4": {
-            "amintado\\rbacplus\\": "src/"
+            "mcflower\\rbacplus\\": "src/"
         }
     },
     "extra": {
-        "bootstrap": "amintado\\rbacplus\\Bootstrap"
+        "bootstrap": "mcflower\\rbacplus\\Bootstrap"
     }
 }
