@@ -1,6 +1,6 @@
 <?php
 
-namespace amintado\rbacplus\controllers;
+namespace mcflower\rbacplus\controllers;
 
 use Yii;
 use yii\web\Controller;
@@ -8,12 +8,12 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
 use yii\helpers\Html;
-use amintado\rbacplus\models\Permission;
-use amintado\rbacplus\models\PermissionSearch;
+use mcflower\rbacplus\models\Permission;
+use mcflower\rbacplus\models\PermissionSearch;
 
 /**
  * PermissionController is controller for manager permissions
- * @author John Martin <john.itvn@gmail.com>
+ * @author Ilya Zelenskiy <elias-green@yandex.ru>
  * @since 1.0.0
  */
 class PermissionController extends Controller {
@@ -31,6 +31,18 @@ class PermissionController extends Controller {
                 ],
             ],
         ];
+    }
+    
+    public function beforeAction($action)
+    {
+        if (parent::beforeAction($action)) {
+            if (!\Yii::$app->user->can('sys_admin') && !\Yii::$app->user->can('root')) {
+                throw new ForbiddenHttpException('Доступ запрещен');
+            }
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
