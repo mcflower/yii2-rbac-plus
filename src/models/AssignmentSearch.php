@@ -1,13 +1,13 @@
 <?php
 
-namespace amintado\rbacplus\models;
+namespace mcflower\rbacplus\models;
 
 use Yii;
 use yii\data\ActiveDataProvider;
-use johnitvn\rbacplus\Module;
+use mcflower\rbacplus\Module;
 
 /**
- * @author John Martin <john.itvn@gmail.com>
+ * @author Ilya Zelenskiy <elias-green@yandex.ru>
  * @since 1.0.0
  * 
  */
