@@ -1,6 +1,6 @@
 <?php
 
-use amintado\rbacplus\models\Role;
+use mcflower\rbacplus\models\Role;
 
 $permissions = Role::getPermistions($model->name);
 $first = '';
