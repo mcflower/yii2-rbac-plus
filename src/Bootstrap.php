@@ -1,13 +1,13 @@
 <?php
 
-namespace amintado\rbacplus;
+namespace mcflower\rbacplus;
 
 use Yii;
 use yii\base\BootstrapInterface;
 
 /**
  * Hook with application bootstrap stage
- * @author John Martin <john.itvn@gmail.com>
+ * @author Ilya Zelenskiy <elias-green@yandex.ru>
  * @since 1.0.0
  */
 class Bootstrap implements BootstrapInterface {
